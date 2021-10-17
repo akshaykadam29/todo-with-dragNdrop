@@ -1,0 +1,28 @@
+<div class="container-fluid h-100">
+  <div class="row justify-content-center align-items-center h-100">
+    <mat-card class="p-5" style="width: 500px;">
+      <h2>ADD TASK</h2>
+      <form [formGroup]="form" (submit)="onAddTask()">
+        <mat-form-field>
+          <input matInput type="text" placeholder="Title" formControlName="title">
+          <mat-error *ngIf="">Please enter title!</mat-error>
+        </mat-form-field>
+        <div>
+          <mat-form-field>
+            <input matInput type="text" placeholder="Description" formControlName="description">
+            <mat-error *ngIf="">Please enter Description!</mat-error>
+          </mat-form-field>
+        </div>
+        <!-- <div>
+          <mat-form-field>
+            <input matInput type="text" placeholder="Status" formControlName="status">
+            <mat-error *ngIf="">Please enter your Email!</mat-error>
+          </mat-form-field>
+          <div>
+          </div>
+        </div> -->
+        <button mat-raised-button color="primary" type="submit">Signup</button>
+      </form>
+    </mat-card>
+  </div>
+</div>
